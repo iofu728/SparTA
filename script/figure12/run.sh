@@ -3,7 +3,6 @@ source ~/anaconda/etc/profile.d/conda.sh
 conda activate longformer
 
 # Training Data
-azcopy copy "https://australiav100data.blob.core.windows.net/hjiang/Experiments/DynamicSparse/Museformer_data.zip?sv=2021-10-04&st=2023-07-25T12%3A50%3A06Z&se=2024-07-26T12%3A50%3A00Z&sr=b&sp=r&sig=jXmilWMp1mjSGQrBzaMizXpglmqvqfREIGmHbr4xQZc%3D" ./ --recursive
 unzip Museformer_data.zip
 cp -r Museformer_data/* ./
 

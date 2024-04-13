@@ -58,7 +58,7 @@ docker run -it --gpus all --shm-size=150gb -v /tmp/data_docker:/data --rm -d --n
 docker run -it --gpus all --shm-size=32gb --rm -d --name pit_artifact -h docker zhengningxin/pit_artifact:v100
 docker exec -it pit_artifact bash
 mkdir -p workspace && cd workspace
-git clone https://github.com/microsoft/SparTA && cd SparTA && git checkout pit_artifact
+git clone https://github.com/microsoft/SparTA && cd SparTA && git checkout pit_artifact && git lfs pull
 bash script/init_env_v100.sh
 bash script/run_v100.sh
 ```
